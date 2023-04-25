@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
 *,
 *::before,
 *::after {
@@ -55,11 +56,86 @@ h6 {
   isolation: isolate;
 }
 
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(0, 0%, 94%);
+  display: grid;
+  place-items: center;
+}
+
+.age-calculator-card {
+  width: 90%;
+  background-color: hsl(0, 0%, 100%);
+  padding: 25px;
+  border-radius: 20px 20px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.age-calculator-card form {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: hsl(0, 1%, 44%);
+}
+.age-calculator-card form input {
+  width: 90px;
+  height: 45px;
+  outline: none;
+  border: 1px solid hsl(0, 0%, 86%);
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin: 5px 0;
+  cursor: pointer;
+}
+.age-calculator-card form input:focus {
+  outline: 2px solid hsl(259, 100%, 65%);
+}
+.age-calculator-card .decoration {
+  margin: 20px 0;
+  position: relative;
+}
+.age-calculator-card .decoration .divider {
+  position: relative;
+  top: 26px;
+  background-color: hsl(0, 0%, 86%);
+  height: 2px;
+  z-index: 1;
+}
+.age-calculator-card .decoration img {
+  width: 50px;
+  height: 49px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  padding: 10px;
+  background-color: hsl(259, 100%, 65%);
+  z-index: 2;
+}
+.age-calculator-card .output {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 54px;
+  font-weight: bold;
+  font-style: italic;
+}
+.age-calculator-card .output span {
+  color: hsl(259, 100%, 65%);
+}
+
 .attribution {
-  font-size: 11px;
+  font-size: 1em;
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(259, 100%, 65%);
 }/*# sourceMappingURL=main.css.map */

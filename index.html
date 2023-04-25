@@ -1,31 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="stylesheet" href="/css/main.css">
-  <script src="/js/main.js" defer></script>  
-  <title>Frontend Mentor | Age calculator app</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="/js/main.js" defer></script>
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <div class="age-calculator-card">
+      <!-- Form with date input fields -->
+      <form action="">
+        <div class="input-field">
+          Day <br />
+          <input
+            type="number"
+            name="day"
+            id="day-input"
+            placeholder="DD"
+            max="31"
+          />
+        </div>
 
-  Day
-  DD
+        <div class="input-field">
+          Month <br />
+          <input
+            type="number"
+            name="month"
+            id="month-input"
+            placeholder="MM"
+            max="12"
+          />
+        </div>
 
-  Month
-  MM
+        <div class="input-field">
+          Year <br />
+          <input
+            type="number"
+            name="year"
+            id="year-input"
+            placeholder="YYYY"
+            max="3000"
+          />
+        </div>
+      </form>
 
-  Year
-  YYYY
+      <!-- Divider decorator with image -->
+      <section class="decoration">
+        <div class="divider"></div>
+        <img src="./assets/images/icon-arrow.svg" alt="arrow icon image" />
+      </section>
 
-  -- years
-  -- months
-  -- days
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">devkilyungi</a>.
-  </div>
-</body>
+      <!-- Output age display section -->
+      <section class="output">
+        <p id="year-output"><span>--</span> years</p>
+        <p id="month-output"><span>--</span> months</p>
+        <p id="day-output"><span>--</span> days</p>
+      </section>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">devkilyungi</a>.
+    </div>
+  </body>
 </html>

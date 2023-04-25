@@ -1,11 +1,100 @@
 @import "./reset";
 @import "./constants";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Poppins", sans-serif;
+  background-color: $off-white;
+  display: grid;
+  place-items: center;
+}
+
+.age-calculator-card {
+  width: 90%;
+  background-color: $white;
+  padding: 25px;
+  border-radius: 20px 20px 100px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  // input section
+  form {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: $smokey-grey;
+
+    input {
+      width: 90px;
+      height: 45px;
+      outline: none;
+      border: 1px solid $light-grey;
+      border-radius: 5px;
+      padding-left: 15px;
+      font-size: 1.25em;
+      font-weight: bold;
+      margin: 5px 0;
+      cursor: pointer;
+    }
+
+    input:focus {
+      outline: 2px solid $purple;
+    }
+  }
+
+  // divider decorator
+  .decoration {
+    margin: 20px 0;
+    position: relative;
+    
+
+    .divider {
+      position: relative;
+      top: 26px;
+      background-color: $light-grey;
+      height: 2px;
+      z-index: 1;
+    }
+
+    img {
+      width: 50px;
+      height: 49px;
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      padding: 10px;
+      background-color: $purple;
+      z-index: 2;
+
+    }
+  }
+
+  // output section
+  .output {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 54px;
+    font-weight: bold;
+    font-style: italic;
+
+    span {
+      color: $purple;
+    }
+  }
+}
 
 .attribution {
-  font-size: 11px;
+  font-size: 1em;
   text-align: center;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: $purple;
 }
