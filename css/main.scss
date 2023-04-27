@@ -11,7 +11,7 @@ body {
   place-items: center;
 }
 
-// Mobile screens (301 - 600)
+/* Mobile screens (301 - 600) */
 .age-calculator-card {
   width: 90%;
   background-color: $white;
@@ -21,7 +21,7 @@ body {
   flex-direction: column;
   justify-content: space-evenly;
 
-  // input section
+  /* input section */
   form {
     display: flex;
     justify-content: space-between;
@@ -48,7 +48,7 @@ body {
     }
   }
 
-  // divider decorator
+  /* divider decorator */
   .decoration {
     margin: 20px 0;
     position: relative;
@@ -57,7 +57,7 @@ body {
       position: relative;
       top: 26px;
       background-color: $light-grey;
-      height: 2px;
+      height: 1.75px;
       z-index: 1;
     }
 
@@ -74,7 +74,7 @@ body {
     }
   }
 
-  // output section
+  /* output section */
   .output {
     display: flex;
     flex-direction: column;
@@ -98,7 +98,7 @@ body {
   }
 }
 
-// Extra small devices such as the Samsung Galaxy Fold
+/* Extra small devices such as the Samsung Galaxy Fold */
 @media only screen and (max-width: 300px) {
   .age-calculator-card {
     padding: 15px;
@@ -141,3 +141,55 @@ body {
     font-size: 0.75em;
   }
 }
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .age-calculator-card {
+    padding: 35px;
+  
+    /* input section */
+    form {
+      display: flex;
+      justify-content: flex-start;
+  
+      input {
+        width: 120px;
+        height: 50px;
+        font-size: 2em;
+        margin: 5px 15px 5px 0;
+      }
+    }
+  
+    /* divider decorator */
+    .decoration {
+      margin: 20px 0;
+  
+      .divider {
+        top: 32px;
+        background-color: $light-grey;
+        height: 1.75px;
+      }
+  
+      img {
+        width: 60px;
+        height: 60px;
+        left: 95%;
+        padding: 13px;
+      }
+    }
+  
+    /* output section */
+    .output {
+      font-size: 62px;
+    }
+  }
+}
+
+// /* Medium devices (landscape tablets, 768px and up) */
+// @media only screen and (min-width: 768px) {...}
+
+// /* Large devices (laptops/desktops, 992px and up) */
+// @media only screen and (min-width: 992px) {...}
+
+// /* Extra large devices (large laptops and desktops, 1200px and up) */
+// @media only screen and (min-width: 1200px) {...}
