@@ -254,5 +254,21 @@ body {
   }
 }
 
-// /* Extra large devices (large laptops and desktops, 1200px and up) */
-// @media only screen and (min-width: 1200px) {...}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .age-calculator-card {
+    width: 55%;
+  
+    /* input section */
+    form {  
+      input {
+        font-size: 2.5em;
+      }
+    }
+  
+    /* output section */
+    .output {
+      font-size: 78px;
+    }
+  }
+}
