@@ -185,8 +185,48 @@ body {
   }
 }
 
-// /* Medium devices (landscape tablets, 768px and up) */
-// @media only screen and (min-width: 768px) {...}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .age-calculator-card {
+    width: 75%;
+    padding: 35px;
+  
+    /* input section */
+    form {
+      justify-content: flex-start;
+      font-size: 0.75em;
+  
+      input {
+        width: 120px;
+        height: 50px;
+        font-size: 2em;
+        margin: 5px 20px 5px 0;
+      }
+    }
+  
+    /* divider decorator */
+    .decoration {
+      margin: 25px 0;
+  
+      .divider {
+        top: 40px;
+        height: 1.75px;
+      }
+  
+      img {
+        width: 81px;
+        height: 80px;
+        left: 92%;
+        padding: 18px;
+      }
+    }
+  
+    /* output section */
+    .output {
+      font-size: 68px;
+    }
+  }
+}
 
 // /* Large devices (laptops/desktops, 992px and up) */
 // @media only screen and (min-width: 992px) {...}

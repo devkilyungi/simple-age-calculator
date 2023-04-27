@@ -211,4 +211,40 @@ body {
   .age-calculator-card .output {
     font-size: 62px;
   }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .age-calculator-card {
+    width: 75%;
+    padding: 35px;
+    /* input section */
+    /* divider decorator */
+    /* output section */
+  }
+  .age-calculator-card form {
+    justify-content: flex-start;
+    font-size: 0.75em;
+  }
+  .age-calculator-card form input {
+    width: 120px;
+    height: 50px;
+    font-size: 2em;
+    margin: 5px 20px 5px 0;
+  }
+  .age-calculator-card .decoration {
+    margin: 25px 0;
+  }
+  .age-calculator-card .decoration .divider {
+    top: 40px;
+    height: 1.75px;
+  }
+  .age-calculator-card .decoration img {
+    width: 81px;
+    height: 80px;
+    left: 92%;
+    padding: 18px;
+  }
+  .age-calculator-card .output {
+    font-size: 68px;
+  }
 }/*# sourceMappingURL=main.css.map */
