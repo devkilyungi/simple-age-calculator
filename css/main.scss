@@ -13,7 +13,7 @@ body {
 
 /* Mobile screens (301 - 600) */
 .age-calculator-card {
-  width: 90%;
+  width: 85%;
   background-color: $white;
   padding: 25px;
   border-radius: 20px 20px 100px 20px;
@@ -145,6 +145,7 @@ body {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .age-calculator-card {
+    width: 85%;
     padding: 35px;
   
     /* input section */
@@ -188,7 +189,7 @@ body {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .age-calculator-card {
-    width: 75%;
+    width: 65%;
     padding: 35px;
   
     /* input section */
@@ -231,7 +232,7 @@ body {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .age-calculator-card {
-    width: 65%;
+    width: 60%;
   
     /* input section */
     form {  
