@@ -86,6 +86,16 @@ body {
   letter-spacing: 2px;
   color: hsl(0, 1%, 44%);
 }
+.age-calculator-card form .input-field {
+  display: flex;
+  flex-direction: column;
+}
+.age-calculator-card form .input-field .error {
+  text-transform: capitalize;
+  font-style: italic;
+  color: hsl(0, 100%, 67%);
+  visibility: hidden;
+}
 .age-calculator-card form input {
   width: 90px;
   height: 45px;

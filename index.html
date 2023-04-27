@@ -27,6 +27,7 @@
             placeholder="DD"
             max="31"
           />
+          <span id="day-error-message" class="error">Error</span>
         </div>
 
         <div class="input-field">
@@ -38,6 +39,7 @@
             placeholder="MM"
             max="12"
           />
+          <span id="month-error-message" class="error">Error</span>
         </div>
 
         <div class="input-field">
@@ -49,13 +51,14 @@
             placeholder="YYYY"
             max="3000"
           />
+          <span id="year-error-message" class="error">Error</span>
         </div>
       </form>
 
       <!-- Divider decorator with image -->
       <section class="decoration">
         <div class="divider"></div>
-        <img src="./assets/images/icon-arrow.svg" alt="arrow icon image" />
+        <img src="./assets/images/icon-arrow.svg" id="image-button" alt="arrow icon image" />
       </section>
 
       <!-- Output age display section -->

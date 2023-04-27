@@ -30,6 +30,18 @@ body {
     letter-spacing: 2px;
     color: $smokey-grey;
 
+    .input-field{
+      display: flex;
+      flex-direction: column;
+    
+      .error {
+        text-transform: capitalize;
+        font-style: italic;
+        color: $light-red;
+        visibility: hidden;
+      }
+    }
+
     input {
       width: 90px;
       height: 45px;
