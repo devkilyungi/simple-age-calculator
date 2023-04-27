@@ -115,7 +115,7 @@ body {
   left: 50%;
   transform: translateX(-50%);
   border-radius: 50%;
-  padding: 10px;
+  padding: 12px;
   background-color: hsl(259, 100%, 65%);
   z-index: 2;
 }
@@ -135,7 +135,39 @@ body {
   font-size: 1em;
   text-align: center;
 }
-
 .attribution a {
   color: hsl(259, 100%, 65%);
+}
+
+@media only screen and (max-width: 300px) {
+  .age-calculator-card {
+    padding: 15px;
+  }
+  .age-calculator-card form {
+    font-size: 0.55em;
+  }
+  .age-calculator-card form input {
+    width: 70px;
+    height: 35px;
+    padding-left: 10px;
+    font-size: 1.5em;
+  }
+  .age-calculator-card .decoration {
+    margin: 10px 0;
+  }
+  .age-calculator-card .decoration .divider {
+    top: 21px;
+    height: 1.5px;
+  }
+  .age-calculator-card .decoration img {
+    width: 39px;
+    height: 39px;
+    padding: 11px;
+  }
+  .age-calculator-card .output {
+    font-size: 36px;
+  }
+  .attribution {
+    font-size: 0.75em;
+  }
 }/*# sourceMappingURL=main.css.map */
