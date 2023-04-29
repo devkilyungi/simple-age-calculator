@@ -131,6 +131,9 @@ body {
 .card form .input .error-outline {
   outline: 2px solid hsl(0, 100%, 67%);
 }
+.card form .input .error-outline:focus {
+  outline: 2px solid hsl(0, 100%, 67%);
+}
 .card form button {
   height: 80px;
   width: 80px;
