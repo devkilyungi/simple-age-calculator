@@ -110,21 +110,36 @@ form.addEventListener('submit', (e) => {
       let yearStart = 0
 
       let dayInterval = setInterval(() => {
-        dayStart++;
-        dayOutput.innerHTML = dayStart;
-        if (dayStart == finalDays) clearInterval(dayInterval)
+        if (finalDays == 0) {
+          dayOutput.innerHTML = 0;
+          clearInterval(dayInterval)
+        } else {
+          dayStart++;
+          dayOutput.innerHTML = dayStart;
+          if (dayStart == finalDays) clearInterval(dayInterval)
+        }
       }, 10)
 
       let monthInterval = setInterval(() => {
-        monthStart++;
-        monthOutput.innerHTML = monthStart;
-        if (monthStart == finalMonths) clearInterval(monthInterval)
+        if (finalMonths == 0) {
+          monthOutput.innerHTML = 0;
+          clearInterval(monthInterval)
+        } else {
+          monthStart++;
+          monthOutput.innerHTML = monthStart;
+          if (monthStart == finalMonths) clearInterval(monthInterval)
+        }
       }, 50)
 
       let yearInterval = setInterval(() => {
-        yearStart++;
-        yearOutput.innerHTML = yearStart;
-        if (yearStart == finalYears) clearInterval(yearInterval)
+        if(finalYears == 0){
+          yearOutput.innerHTML = 0;
+          clearInterval(yearInterval)
+        } else {
+          yearStart++;
+          yearOutput.innerHTML = yearStart;
+          if (yearStart == finalYears) clearInterval(yearInterval)
+        }
       }, 20)
 
     }
@@ -140,7 +155,7 @@ function getDay(currentDate, userDate) {
   } else if (userBirthDay > currentDay) {
     return userBirthDay - currentDay
   } else {
-    return currentDay - userBirthDay
+    return 0 // if they're equal
   }
 }
 
