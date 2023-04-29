@@ -101,9 +101,32 @@ form.addEventListener('submit', (e) => {
       yearInput.classList.remove("error-outline")
       yearTitle.classList.remove("error-color")
 
-      dayOutput.innerHTML = getDay(currentDate, userDate)
-      monthOutput.innerHTML = curentDateDayJsFormat.diff(userInput, 'month') % 12
-      yearOutput.innerHTML = curentDateDayJsFormat.diff(userInput, 'year')
+      let finalDays = getDay(currentDate, userDate)
+      let finalMonths = curentDateDayJsFormat.diff(userInput, 'month') % 12
+      let finalYears = curentDateDayJsFormat.diff(userInput, 'year')
+
+      let dayStart = 0
+      let monthStart = 0
+      let yearStart = 0
+
+      let dayInterval = setInterval(() => {
+        dayStart++;
+        dayOutput.innerHTML = dayStart;
+        if (dayStart == finalDays) clearInterval(dayInterval)
+      }, 25)
+
+      let monthInterval = setInterval(() => {
+        monthStart++;
+        monthOutput.innerHTML = monthStart;
+        if (monthStart == finalMonths) clearInterval(monthInterval)
+      }, 25)
+
+      let yearInterval = setInterval(() => {
+        yearStart++;
+        yearOutput.innerHTML = yearStart;
+        if (yearStart == finalYears) clearInterval(yearInterval)
+      }, 25)
+
     }
   }
 })
