@@ -118,7 +118,7 @@ form.addEventListener('submit', (e) => {
           dayOutput.innerHTML = dayStart;
           if (dayStart == finalDays) clearInterval(dayInterval)
         }
-      }, 10)
+      }, 20)
 
       let monthInterval = setInterval(() => {
         if (finalMonths == 0) {
@@ -140,7 +140,7 @@ form.addEventListener('submit', (e) => {
           yearOutput.innerHTML = yearStart;
           if (yearStart == finalYears) clearInterval(yearInterval)
         }
-      }, 20)
+      }, 10)
 
     }
   }
