@@ -113,19 +113,19 @@ form.addEventListener('submit', (e) => {
         dayStart++;
         dayOutput.innerHTML = dayStart;
         if (dayStart == finalDays) clearInterval(dayInterval)
-      }, 25)
+      }, 10)
 
       let monthInterval = setInterval(() => {
         monthStart++;
         monthOutput.innerHTML = monthStart;
         if (monthStart == finalMonths) clearInterval(monthInterval)
-      }, 25)
+      }, 50)
 
       let yearInterval = setInterval(() => {
         yearStart++;
         yearOutput.innerHTML = yearStart;
         if (yearStart == finalYears) clearInterval(yearInterval)
-      }, 25)
+      }, 20)
 
     }
   }
