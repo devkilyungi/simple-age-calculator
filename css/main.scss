@@ -3,291 +3,127 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
 
 body {
-  height: 100vh;
-  width: 100vw;
-  font-family: "Poppins", sans-serif;
   background-color: $off-white;
-  display: grid;
-  place-items: center;
+  position: relative;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Mobile screens (405 - 600) */
-.age-calculator-card {
-  width: 85%;
+/* Main Content*/
+/* Card */
+.card {
+  height: 68%;
+  width: 750px;
+  border-radius: 25px 25px 175px 25px;
   background-color: $white;
-  padding: 25px;
-  border-radius: 20px 20px 100px 20px;
+  padding: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
 
-  /* input section */
   form {
+    height: 30%;
     display: flex;
-    justify-content: space-between;
-    font-size: 0.75em;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: $smokey-grey;
+    justify-content: flex-start;
 
-    .input-field{
-      display: flex;
-      flex-direction: column;
-    
-      .error {
-        text-transform: capitalize;
+    .input {
+      margin-right: 25px;
+
+      .title {
+        font-size: 0.75em;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: $smokey-grey;
+      }
+
+      input {
+        height: 50px;
+        width: 145px;
+        padding: 12px;
+        font-size: $inputs-font-size;
+        outline: none;
+        border: 1px solid $light-grey;
+        border-radius: 5px;
+        color: $off-black;
+      }
+
+      input:focus {
+        outline: 2px solid $purple;
+      }
+
+      .error-message {
+        padding: 5px 0;
+        font-size: 0.75em;
         font-style: italic;
         color: $light-red;
         visibility: hidden;
       }
+
+      .error-color {
+        color: $light-red;
+      }
+
+      .error-outline {
+        outline: 2px solid $light-red;
+      }
     }
 
-    input {
-      width: 90px;
-      height: 45px;
+    button {
+      height: 80px;
+      width: 80px;
+      border-radius: 500%;
+      background-color: $purple;
       outline: none;
-      border: 1px solid $light-grey;
-      border-radius: 5px;
-      padding-left: 15px;
-      font-size: 1.25em;
-      font-weight: bold;
-      margin: 5px 0;
+      border: none;
+      padding: 20px;
+      display: grid;
+      place-items: center;
+      margin-left: 40px;
+      position: relative;
+      top: 63%;
       cursor: pointer;
-    }
-
-    input:focus {
-      outline: 2px solid $purple;
-    }
-  }
-
-  /* divider decorator */
-  .decoration {
-    margin: 20px 0;
-    position: relative;
-
-    .divider {
-      position: relative;
-      top: 26px;
-      background-color: $light-grey;
-      height: 1.75px;
-      z-index: 1;
-    }
-
-    img {
-      width: 50px;
-      height: 49px;
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      border-radius: 50%;
-      padding: 12px;
-      background-color: $purple;      
-      box-shadow: 0 2px 1px $purple;
       z-index: 2;
-      cursor: pointer;
-      transition: bottom 1s ease-in-out;
-    }
-
-    img:hover {
-      bottom: 2px;
-      box-shadow: 0 3px 5px $purple;
     }
   }
 
-  /* output section */
+  .divider {
+    height: 1.5px;
+    background-color: $light-grey;
+    position: relative;
+    bottom: 1.5%;
+    width: 90%;
+  }
+
   .output {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    font-size: 54px;
-    font-weight: bold;
-    font-style: italic;
+    margin-top: 10px;
 
     span {
       color: $purple;
+      font-style: italic;
+    }
+
+    p {
+      font-size: 5.5em;
+      font-style: italic;
+      font-weight: bold;
+      line-height: 1.1em;
     }
   }
 }
 
+/* Footer */
 .attribution {
-  font-size: 1em;
-  text-align: center;
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.5em;
 
   a {
+    font-size: 0.9em;
     color: $purple;
-  }
-}
-
-/* Extra small devices such as the Samsung Galaxy Fold */
-@media only screen and (max-width: 404px) {
-  .age-calculator-card {
-    // input section
-    form {
-      font-size: 0.65em;
-
-      input {
-        width: 60px;
-        height: 35px;
-        padding-left: 5px;
-        font-size: 1.75em;
-      }
-    }
-
-    // divider decorator
-    .decoration {
-      margin: 10px 0;
-
-      .divider {
-        top: 21px;
-        height: 1.5px;
-      }
-
-      img {
-        width: 39px;
-        height: 39px;
-        padding: 10px;
-      }
-    }
-
-    // output section
-    .output {
-      font-size: 34px;
-    }
-  }
-
-  .attribution {
-    font-size: 0.75em;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .age-calculator-card {
-    width: 85%;
-    padding: 35px;
-  
-    /* input section */
-    form {
-      display: flex;
-      justify-content: flex-start;
-  
-      input {
-        width: 120px;
-        height: 50px;
-        font-size: 2em;
-        margin: 5px 15px 5px 0;
-      }
-    }
-  
-    /* divider decorator */
-    .decoration {
-      margin: 20px 0;
-  
-      .divider {
-        top: 32px;
-        background-color: $light-grey;
-        height: 1.75px;
-      }
-  
-      img {
-        width: 60px;
-        height: 60px;
-        left: 95%;
-        padding: 13px;
-      }
-    }
-  
-    /* output section */
-    .output {
-      font-size: 62px;
-    }
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .age-calculator-card {
-    width: 65%;
-    padding: 35px;
-  
-    /* input section */
-    form {
-      justify-content: flex-start;
-      font-size: 0.75em;
-  
-      input {
-        width: 120px;
-        height: 50px;
-        font-size: 2em;
-        margin: 5px 20px 5px 0;
-      }
-    }
-  
-    /* divider decorator */
-    .decoration {
-      margin: 25px 0;
-  
-      .divider {
-        top: 40px;
-        height: 1.75px;
-      }
-  
-      img {
-        width: 81px;
-        height: 80px;
-        left: 95%;
-        padding: 18px;
-      }
-    }
-  
-    /* output section */
-    .output {
-      font-size: 68px;
-    }
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .age-calculator-card {
-    width: 60%;
-  
-    /* input section */
-    form {  
-      input {
-        width: 125px;
-        height: 55px;
-        font-size: 2.25em;
-      }
-    }
-  
-    /* divider decorator */
-    .decoration {
-      margin: 5px 0;
-  
-      .divider {
-        top: 40px;
-        height: 1.5px;
-      }
-    }
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .age-calculator-card {
-    width: 55%;
-  
-    /* input section */
-    form {  
-      input {
-        font-size: 2.5em;
-      }
-    }
-  
-    /* output section */
-    .output {
-      font-size: 78px;
-    }
   }
 }
