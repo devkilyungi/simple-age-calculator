@@ -9,9 +9,10 @@ body {
 }
 
 /* Main Content*/
+
 /* Card */
 .card {
-  height: 68%;
+  height: 520px;
   width: 750px;
   border-radius: 25px 25px 175px 25px;
   background-color: $white;
@@ -37,6 +38,7 @@ body {
         text-transform: uppercase;
         letter-spacing: 2px;
         color: $smokey-grey;
+        margin-bottom: 5px;
       }
 
       input {
@@ -74,7 +76,7 @@ body {
     button {
       height: 80px;
       width: 80px;
-      border-radius: 500%;
+      border-radius: 50%;
       background-color: $purple;
       outline: none;
       border: none;
@@ -121,9 +123,169 @@ body {
   left: 50%;
   transform: translateX(-50%);
   font-size: 1.5em;
+  text-align: center;
 
   a {
     font-size: 0.9em;
     color: $purple;
+  }
+}
+
+/* Tablet Screens*/
+@media only screen and (max-width: 992px) {
+  /* Card */
+  .card {
+    width: 700px;
+    padding: 35px;
+
+    .divider {
+      bottom: 3.5%;
+    }
+  }
+
+  /* Footer */
+  .attribution {
+    bottom: 7%;
+    font-size: 1.2em;
+
+    a {
+      font-size: 0.85em;
+    }
+  }
+}
+
+/* Small tablets and Large phones */
+@media only screen and (max-width: 768px) {
+  /* Card */
+  .card {
+    width: 520px;
+    padding: 25px;
+
+    form {
+      .input {
+        margin-right: 15px;
+
+        input {
+          height: 60px;
+        }
+      }
+
+      button {
+        position: absolute;
+        top: 33%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 0;
+      }
+    }
+
+    .divider {
+      bottom: 4%;
+      width: 100%;
+    }
+
+    .output {
+      p {
+        font-size: 5em;
+      }
+    }
+  }
+
+  /* Footer */
+  .attribution {
+    font-size: 1em;
+
+    a {
+      font-size: 0.85em;
+    }
+  }
+}
+
+/* Mobile Phones */
+@media only screen and (max-width: 576px) {
+  /* Card */
+  .card {
+    width: 380px;
+    padding: 50px 25px;
+
+    form {
+      .input {
+        margin-right: 15px;
+
+        input {
+          height: 50px;
+          width: 95px;
+          font-size: 16px;
+          font-size: 24px;
+        }
+      }
+
+      button {
+        height: 70px;
+        width: 70px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 0;
+      }
+    }
+
+    .divider {
+      bottom: 4.5%;
+      width: 100%;
+    }
+
+    .output {
+      margin-top: 0;
+
+      p {
+        font-size: 3.65em;
+      }
+    }
+  }
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 404px) {
+   /* Card */
+   .card {
+    height: 425px;
+    width: 300px;
+    padding: 40px 15px;
+
+    form {
+      .input {
+        margin-right: 15px;
+
+        input {
+          height: 50px;
+          width: 80px;
+        }
+      }
+
+      button {
+        height: 70px;
+        width: 70px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin-left: 0;
+      }
+    }
+
+    .divider {
+      bottom: 4.5%;
+      width: 100%;
+    }
+
+    .output {
+      margin-top: 0;
+
+      p {
+        font-size: 2.75em;
+      }
+    }
   }
 }
