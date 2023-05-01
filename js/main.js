@@ -142,6 +142,9 @@ form.addEventListener('submit', (e) => {
         }
       }, 10)
 
+      if( finalDays == 0 && finalMonths == 0){
+        alert('Happy Birthday!!')
+      }
     }
   }
 })
