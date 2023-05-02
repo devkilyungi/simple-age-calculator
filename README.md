@@ -34,14 +34,14 @@ Users should be able to:
 
 ### Screenshots
 
-![](./assets/images/desktop_screenshot.png)
+![Desktop Screenshot](./assets/images/desktop_screenshot.png)
 
-![](./assets/images/mobile_screenshot.png)
+![Mobile Screenshot](./assets/images/mobile_screenshot.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Github Page](https://devkilyungi.github.io/simple-age-calculator/)
 
 ## My process
 
