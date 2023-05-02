@@ -23,9 +23,6 @@ const errorMessages = {
   year: ''
 }
 
-let hasError
-
-
 // if user is inputting data, clear error messages
 inputs.forEach((input) => {
   input.addEventListener('input', () => {
@@ -62,7 +59,7 @@ form.addEventListener('submit', (e) => {
   checkIfValid()
 
   // check if there are errors
-  hasError = (errorMessages.day !== '' || errorMessages.month !== '' || errorMessages.year !== '') ? true : false
+  let hasError = (errorMessages.day !== '' || errorMessages.month !== '' || errorMessages.year !== '') ? true : false
 
   // if there are errors, show error messages
   if (hasError) {
@@ -80,26 +77,9 @@ form.addEventListener('submit', (e) => {
       dayErrorElement.innerHTML = 'Must be a valid date'
       hasError = true
 
-      dayErrorElement.style.visibility = 'visible'
-      dayInput.classList.add("error-outline")
-      dayTitle.classList.add("error-color")
-
-      monthInput.classList.add("error-outline")
-      monthTitle.classList.add("error-color")
-
-      yearInput.classList.add("error-outline")
-      yearTitle.classList.add("error-color")
+      addErrorStyle()
     } else {
-      // remove errors and show difference on UI
-      dayErrorElement.style.visibility = 'hidden'
-      dayInput.classList.remove("error-outline")
-      dayTitle.classList.remove("error-color")
-
-      monthInput.classList.remove("error-outline")
-      monthTitle.classList.remove("error-color")
-
-      yearInput.classList.remove("error-outline")
-      yearTitle.classList.remove("error-color")
+      removeErrorStyle()
 
       let finalDays = getDay(currentDate, userDate)
       let finalMonths = curentDateDayJsFormat.diff(userInput, 'month') % 12
@@ -148,6 +128,30 @@ form.addEventListener('submit', (e) => {
     }
   }
 })
+
+function removeErrorStyle() {
+  dayErrorElement.style.visibility = 'hidden'
+  dayInput.classList.remove("error-outline")
+  dayTitle.classList.remove("error-color")
+
+  monthInput.classList.remove("error-outline")
+  monthTitle.classList.remove("error-color")
+
+  yearInput.classList.remove("error-outline")
+  yearTitle.classList.remove("error-color")
+}
+
+function addErrorStyle() {
+  dayErrorElement.style.visibility = 'visible'
+  dayInput.classList.add("error-outline")
+  dayTitle.classList.add("error-color")
+
+  monthInput.classList.add("error-outline")
+  monthTitle.classList.add("error-color")
+
+  yearInput.classList.add("error-outline")
+  yearTitle.classList.add("error-color")
+}
 
 function getDay(currentDate, userDate) {
   const currentDay = currentDate.getDate()
