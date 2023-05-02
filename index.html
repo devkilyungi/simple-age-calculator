@@ -20,52 +20,66 @@
   </head>
   <body>
     <!-- Main Content -->
-    <div class="card">
-      <!-- Form -->
-      <form action="/" method="get" id="form">
-        <div class="input">
-          <p class="title" id="day-title">day</p>
-          <input type="number" id="day-input" name="day" placeholder="DD" />
-          <p class="error-message" id="day-error">The field is required</p>
+    <main>
+      <div class="card">
+        <!-- Form -->
+        <form action="/" method="get" id="form">
+          <div class="input">
+            <p class="title" id="day-title">day</p>
+            <input type="number" id="day-input" name="day" placeholder="DD" />
+            <p class="error-message" id="day-error">The field is required</p>
+          </div>
+
+          <div class="input">
+            <p class="title" id="month-title">month</p>
+            <input
+              type="number"
+              id="month-input"
+              name="month"
+              placeholder="MM"
+            />
+            <p class="error-message" id="month-error">The field is required</p>
+          </div>
+
+          <div class="input">
+            <p class="title" id="year-title">year</p>
+            <input
+              type="number"
+              id="year-input"
+              name="year"
+              placeholder="YYYY"
+            />
+            <p class="error-message" id="year-error">The field is required</p>
+          </div>
+
+          <button type="submit">
+            <img
+              src="./assets/images/icon-arrow.svg"
+              alt="form button background image"
+            />
+          </button>
+        </form>
+
+        <!-- Divider -->
+        <div class="divider"></div>
+
+        <!-- Output -->
+        <div class="output">
+          <p><span id="year-output">- -</span> years</p>
+          <p><span id="month-output">- -</span> months</p>
+          <p><span id="day-output">- -</span> days</p>
         </div>
-
-        <div class="input">
-          <p class="title" id="month-title">month</p>
-          <input type="number" id="month-input" name="month" placeholder="MM" />
-          <p class="error-message" id="month-error">The field is required</p>
-        </div>
-
-        <div class="input">
-          <p class="title" id="year-title">year</p>
-          <input type="number" id="year-input" name="year" placeholder="YYYY" />
-          <p class="error-message" id="year-error">The field is required</p>
-        </div>
-
-        <button type="submit">
-          <img
-            src="./assets/images/icon-arrow.svg"
-            alt="form button background image"
-          />
-        </button>
-      </form>
-
-      <!-- Divider -->
-      <div class="divider"></div>
-
-      <!-- Output -->
-      <div class="output">
-        <p><span id="year-output">- -</span> years</p>
-        <p><span id="month-output">- -</span> months</p>
-        <p><span id="day-output">- -</span> days</p>
       </div>
-    </div>
+    </main>
 
     <!-- Footer -->
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="https://github.com/devkilyungi">devkilyungi</a>.
-    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/devkilyungi">devkilyungi</a>.
+      </div>
+    </footer>
   </body>
 </html>
