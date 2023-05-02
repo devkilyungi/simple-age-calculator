@@ -132,7 +132,7 @@ form.addEventListener('submit', (e) => {
       }, 50)
 
       let yearInterval = setInterval(() => {
-        if(finalYears == 0){
+        if (finalYears == 0) {
           yearOutput.innerHTML = 0;
           clearInterval(yearInterval)
         } else {
@@ -142,7 +142,7 @@ form.addEventListener('submit', (e) => {
         }
       }, 10)
 
-      if( finalDays == 0 && finalMonths == 0){
+      if (finalDays == 0 && finalMonths == 0) {
         alert('Happy Birthday!!')
       }
     }
@@ -194,6 +194,42 @@ function checkIfValid() {
   if (monthInput.value > 12 || monthInput.value < 1) {
     errorMessages.month = 'Must be a valid month'
   }
+
+  // if month is a valid month, check for valid days in that month
+  switch (parseInt(monthInput.value)) {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+      if (dayInput.value > 31) {
+        errorMessages.day = 'Must be a valid day for this month (31 days)'
+      }
+      break;
+    case 2:
+      // if leap year
+      if (yearInput.value % 4 == 0) {
+        if (dayInput.value > 29) {
+          errorMessages.day = 'Must be a valid day for this month (29 days)'
+        }
+      } else {
+        if (dayInput.value > 28) {
+          errorMessages.day = 'Must be a valid day for this month (28 days)'
+        }
+      }
+      break;
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+      if (dayInput.value > 30) {
+        errorMessages.day = 'Must be a valid day for this month (30 days)'
+      }
+      break;
+  }
+
 
   let date = new Date()
   if (yearInput.value > date.getFullYear()) {
