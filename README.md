@@ -11,7 +11,6 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-- [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
 ## Overview
@@ -40,7 +39,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Github Solution Link](https://github.com/devkilyungi/simple-age-calculator)
 - Live Site URL: [Github Page](https://devkilyungi.github.io/simple-age-calculator/)
 
 ## My process
@@ -57,10 +56,6 @@ Users should be able to:
 
 - How to validate HTML forms
 - How to animate numbers use setInterval
-
-## Author
-
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 
 ## Acknowledgments
 
