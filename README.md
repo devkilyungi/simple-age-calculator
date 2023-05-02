@@ -6,7 +6,7 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -20,11 +20,9 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 ### The challenge
 
-
 My challenge was to build out this age calculator app and get it looking as close to the design as possible.
 
 Users should be able to:
-
 - View an age in years, months, and days after submitting a valid date through the form
 - Receive validation errors if:
   - Any field is empty when the form is submitted
@@ -34,11 +32,13 @@ Users should be able to:
   - The date is invalid e.g. 31/04/1991 (there are 30 days in April)
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
-- **Bonus**: See the age numbers animate to their final number when the form is submitted
+- See the age numbers animate to their final number when the form is submitted
 
-### Screenshot
+### Screenshots
 
-![](./screenshot.jpg)
+![](./assets/images/desktop_screenshot.png)
+
+![](./assets/images/mobile_screenshot.png)
 
 ### Links
 
@@ -50,21 +50,15 @@ Users should be able to:
 ### Built with
 
 - Semantic HTML5 markup
-- CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
+- SCSS
+- JavaScript Vanilla
 
 ### What I learned
 
-
-### Continued development
-
-
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- How to validate HTML forms
+- How to animate numbers use setInterval
 
 ## Author
 
@@ -72,3 +66,4 @@ Users should be able to:
 
 ## Acknowledgments
 
+- Thank you to FrontEnd Mentor for providing me with the assets and the challenge. I have enjoyed building this project.
