@@ -55,7 +55,7 @@ Users should be able to:
 ### What I learned
 
 - How to validate HTML forms
-- How to animate numbers use setInterval
+- How to animate numbers using setInterval
 
 ## Acknowledgments
 
