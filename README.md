@@ -40,7 +40,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Solution Link](https://github.com/devkilyungi/simple-age-calculator)
-- Live Site URL: [Github Page](https://simple-age-calculator.vercel.app/)
+- Live Site URL: [Vercel Page](https://simple-age-calculator.vercel.app/)
 
 ## My process
 
